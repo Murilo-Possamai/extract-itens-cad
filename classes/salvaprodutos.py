@@ -35,9 +35,6 @@ class SalvaProdutos:
         
         if descricao and len(descricao) <= 5:
             erros.append(f"DESCRICAO deve ter mais de 5 caracteres (Atualmente: {len(descricao)}).")
-            
-        if preco is not None and preco <= 0:
-            erros.append("PRECO não pode ser zero ou negativo.")
 
         if erros:
             raise ValueError("\n".join(erros))
